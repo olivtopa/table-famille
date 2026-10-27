@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Table & Famille - Menus et Courses</title>
+    
+    <!-- PWA Primary Color & Manifest -->
+    <meta name="theme-color" content="#047857" />
+    <meta name="description" content="14 repas équilibrés et liste de courses automatique calculée au gramme près" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- iOS / Apple Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Table&Famille" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </head>
+  <body class="bg-[#FAF8F5]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
