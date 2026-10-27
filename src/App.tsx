@@ -1103,9 +1103,9 @@ export default function App() {
               </div>
 
               {/* Badge Mobile total personnes */}
-              <div className="flex md:hidden items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-800 px-3 py-1.5 rounded-xl text-xs font-bold">
-                <Users className="w-3.5 h-3.5" />
-                <span>{totalPeople} pers.</span>
+              <div className="flex md:hidden items-center gap-1.5 bg-emerald-50 border border-emerald-200 text-emerald-800 px-3 py-1.5 rounded-xl text-xs font-bold shrink-0 whitespace-nowrap ml-2">
+                <Users className="w-3.5 h-3.5 shrink-0" />
+                <span className="whitespace-nowrap">{totalPeople} pers.</span>
               </div>
             </div>
 
